@@ -233,10 +233,10 @@ const Nav = () => {
             <PrimaryNav className={showNav ? 'open' : null}>
                 <div className="contain">
                 <Link className="primary-nav-item" to="/work"  >Featured Projects</Link>
-                <Link className="primary-nav-item" to="#"  >About</Link>
+                <Link className="primary-nav-item" to="/about"  >About</Link>
                 <Link className="primary-nav-item" to="#"  >Careers</Link>
                 <Link className="primary-nav-item" to="#"  >Press</Link>
-                <Link className="primary-nav-item" to="#" >Contact</Link>    
+                <Link className="primary-nav-item" to="/contact" >Contact</Link>    
                 <span className="primary-nav-insta">
                         <a href="https://www.instagram.com/_studiogray_/"  target="_blank"><span className="sr-only">Instagram _studiogray_</span><InstagramLogo size={28}/></a>
                     </span>
