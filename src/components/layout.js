@@ -7,44 +7,49 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import styled from "styled-components"
 
+import Nav from "./nav"
+import "./layout.scss"
+
+
+// styled components
+
+const TopBar = styled.div`
+  background-color: white;
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  z-index: 2;
+`
+
+const Container = styled.div`
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media all and (max-width: 768px) {
+    width: auto;
+  }
+`
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+ 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+   
+    <Container>
+      <main>{children}</main>   
+    </Container>
+    <TopBar />
+    <Nav />
     </>
   )
 }
