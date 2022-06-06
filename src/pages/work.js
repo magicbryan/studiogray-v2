@@ -13,6 +13,10 @@ const WorkGrid = styled.div`
 
 const WorkItem = styled.div`
     width: 50%;
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+    }
 `
 
 const Work = () => {

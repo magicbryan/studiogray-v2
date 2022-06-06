@@ -12,26 +12,27 @@ import StudioImg from "../images/SG-logo-studio.png"
 import GrayImg from "../images/SG-logo-gray.png"
 
 const SliderWrapper = styled.div `
-  max-width: 800px;
+  max-width: 66.667vw;
   margin: 0 auto;
+  padding: 0 !important;
 `
 const LogoWrapper = styled.div`
   pointer-events: none;
   position: fixed;
   right: 0;
-  top: 20vh;
+  top: 33.333vh;
   width: 100%;
   z-index: 9;
   .split-logo-right{
     text-align: right;
     img {
-      max-width: 30%;
+      max-width: 40%;
     }
    
   }
   .split-logo-left {
     text-align: left;
-    max-width: 30%;
+    max-width: 40%;
   }
   @media all and (max-width: 1024px) {
     .split-logo-right img, .split-logo-left {

@@ -7,28 +7,26 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-
 import styled from "styled-components"
-
-import Nav from "./nav"
+import TopNav from "./TopNav"
 import "./layout.scss"
 
 
 // styled components
 
-const TopBar = styled.div`
-  background-color: white;
-  position:fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 20px;
-  z-index: 2;
-`
+// const TopBar = styled.div`
+//   background-color: white;
+//   position:fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   height: 20px;
+//   z-index: 2;
+// `
 
 const Container = styled.div`
   box-sizing: border-box;
-  width: 80vw;
+  width: 66.667vw;
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
@@ -46,10 +44,9 @@ const Layout = ({ children }) => {
     <>
    
     <Container>
+      <TopNav />
       <main>{children}</main>   
     </Container>
-    <TopBar />
-    <Nav />
     </>
   )
 }

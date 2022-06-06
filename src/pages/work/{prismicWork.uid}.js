@@ -7,11 +7,16 @@ import PortraitImages from '../../components/PortraitImages'
 import LandscapeImage from '../../components/LandscapeImage'
 
 const WorkDescWrapper = styled.div`
+  text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   p {
     margin-left: auto;
     margin-right: auto;
+  }
+  h1.work-item-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
   }
 `
 
@@ -22,13 +27,14 @@ const WorkPage = ({data}) => {
     <Layout>
     {console.log(workData)}
 
-      <h1>{workData.title.raw[0].text}</h1>
-      
       <div className="work-hero-image">
         <GatsbyImage image={heroImg} alt={workData.hero_image.alt ? workData.hero_image.alt : ''} />
       </div>
 
+      
+
       <WorkDescWrapper>
+        <h1 className="work-item-title">{workData.title.raw[0].text}</h1>
         <div dangerouslySetInnerHTML={{__html: workData.description.html}} />
       </WorkDescWrapper>
 

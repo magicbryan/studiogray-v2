@@ -7,6 +7,17 @@ const PortImageWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
     margin-bottom: 2rem;
+    .port-img {
+      aspect-ratio: 100 / 135;
+      .gatsby-image-wrapper-constrained {
+        height: 100%;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 `
 
 const PortraitImages = (data) => {
