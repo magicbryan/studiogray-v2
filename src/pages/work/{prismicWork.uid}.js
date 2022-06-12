@@ -25,7 +25,7 @@ const WorkPage = ({data}) => {
   const heroImg = getImage(workData.hero_image)
   return (
     <Layout>
-    {console.log(workData)}
+    {console.log(data)}
 
       <div className="work-hero-image">
         <GatsbyImage image={heroImg} alt={workData.hero_image.alt ? workData.hero_image.alt : ''} />

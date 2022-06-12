@@ -17,6 +17,9 @@ const WorkItem = styled.div`
     h2 {
       text-transform: uppercase;
     }
+    @media all and (max-width: 640px) {
+      width: 100%;
+    }
 `
 
 const Work = () => {

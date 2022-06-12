@@ -15,6 +15,9 @@ const SliderWrapper = styled.div `
   max-width: 66.667vw;
   margin: 0 auto;
   padding: 0 !important;
+  @media all and (max-width: 640px) {
+    margin-top: 6rem;
+  }
 `
 const LogoWrapper = styled.div`
   pointer-events: none;
@@ -47,6 +50,9 @@ const LogoWrapper = styled.div`
       margin-top: 10px;
     }
   }
+  @media all and (max-width: 1024px) {
+      top: 13rem;
+    }
 
 
 `
@@ -103,8 +109,9 @@ const Index = () => {
             let slideImg = getImage(slide.slide_image)
             return (
             <div key={index}>
-
-              <GatsbyImage image={slideImg} alt="" />
+              <Link to = {slide.link_url}>
+                <GatsbyImage image={slideImg} alt="" />
+              </Link>
             </div>
             )
           }) }

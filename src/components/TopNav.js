@@ -32,6 +32,9 @@ const TopNavWrapper = styled.div`
     #pn-contact {
         text-align: right;
     }
+    @media all and (max-width: 640px) {
+        grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+    }
 `
 const TopNav = () => {
   return (
@@ -41,7 +44,7 @@ const TopNav = () => {
         <div className="icon">
             <Link to="/"><img src={sgIcon} /></Link>
         </div>
-        <Link id="pn-press" className="primary-nav-item" to="#"  >PRESS</Link>
+        <Link id="pn-press" className="primary-nav-item" to="/press"  >PRESS</Link>
         <Link id="pn-contact" className="primary-nav-item" to="/contact" >CONTACT</Link>    
     </TopNavWrapper>
   )

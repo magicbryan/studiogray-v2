@@ -12,7 +12,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <div className="inside-contain">
+    
         <h1>Get in touch</h1>
         <div className="company-info">
           <p>107 SE Washington Street<br />
@@ -164,7 +164,7 @@ const ContactPage = () => {
         <div>
           <p>For all other inquiries, please email us at <a href="mailto:hello@studio-gray.co">hello@studio-gray.co</a></p>
         </div>
-      </div>
+      
     </Layout>
   )
 }
