@@ -9,6 +9,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import TopNav from "./TopNav"
+import Footer from "./Footer"
 import "./layout.scss"
 
 
@@ -45,7 +46,8 @@ const Layout = ({ children }) => {
    
     <Container>
       <TopNav />
-      <main>{children}</main>   
+      <main>{children}</main>  
+      <Footer /> 
     </Container>
     </>
   )

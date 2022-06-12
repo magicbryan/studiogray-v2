@@ -12,7 +12,7 @@ const WorkGrid = styled.div`
 `
 
 const WorkItem = styled.div`
-    width: 50%;
+    width: calc(50% - 1rem);
     text-align: center;
     h2 {
       text-transform: uppercase;
@@ -22,30 +22,46 @@ const WorkItem = styled.div`
 const Work = () => {
     const data = useStaticQuery(graphql`
     query AllWorkQuery {
-        allPrismicWork {
-            edges {
-              node {
-                uid
-                data {
-                  hero_image {
-                    alt
-                    gatsbyImageData
-                  }
-                  title {
-                    text
-                  }
-                }
+      allPrismicWork(sort: {fields: first_publication_date, order: DESC}) {
+        edges {
+          node {
+            uid
+            data {
+              hero_image {
+                alt
+                gatsbyImageData
+              }
+              title {
+                text
               }
             }
-        }    
+          }
+          next {
+            uid
+            data {
+              title {
+                text
+              }
+            }
+          }
+          previous {
+            uid
+            data {
+              title {
+                text
+              }
+            }
+          }
+        }
+      }
     }
-  
+    
     `)
 
   const workData = data.allPrismicWork.edges
   return (
     <Layout>
-        {console.log(workData)}
+        {console.log(data)}
         <WorkGrid>
             {workData.map((workItem, index) => {
                 const workImg = getImage(workItem.node.data.hero_image)
