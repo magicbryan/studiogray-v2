@@ -90,6 +90,7 @@ const Index = () => {
       slidesToShow: 1,
       slidesToScroll: 1,
       centerPadding: '10px',
+      pauseOnHover:false,
   };
   const slides = data.allPrismicHomePage.edges[0].node.data.hero_slider
   const slider1 = useRef(null)
